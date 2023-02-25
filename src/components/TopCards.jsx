@@ -1,5 +1,6 @@
 import React from "react";
-import { BsArrowUpShort } from "react-icons/bs";
+import { BsArrowUpShort,BsArrowDownShort } from "react-icons/bs";
+
 
 const TopCards = () => {
   const cardData = [
@@ -11,16 +12,17 @@ const TopCards = () => {
   return (
     <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-10 border-gray-100 border-[1px]">
       {cardData.map((data) => (
-        <div className="bg-white px-6 py-3 rounded text-gray-700">
+        <div className="bg-white px-6 py-3 rounded text-gray-700" key={data.id}>
           <div>
             <h4>{data.title}</h4>
           </div>
           <div className="flex items-center justify-between mt-4 text-gray-800">
-            <h1 className="text-[18px] font-semibold">${data.price}</h1>
+            <h1 className="text-[18px] font-semibold">${data.price.toLocaleString(navigator.language, { minimumFractionDigits: 0 })}</h1>
             <div className="flex items-center">
-              <span className="text-green-600">+{data.percent}%</span>
+              <span className={`${data.percent < 15 ? 'text-red-600': 'text-green-600'}`}>+{data.percent}%</span>
               <span>
-                <BsArrowUpShort size={20} />
+                {data.percent > 15 ? <BsArrowUpShort size={20} /> : <BsArrowDownShort size={20}/>}
+                
               </span>
             </div>
           </div>
