@@ -1,4 +1,6 @@
+import { BarChart } from "@/components/BarChart";
 import Header from "@/components/Header";
+import RecentOrders from "@/components/RecentOrders";
 import TopCards from "@/components/TopCards";
 import Head from "next/head";
 
@@ -15,6 +17,14 @@ export default function Home() {
         <div className="w-[95%] mx-auto">
           <Header />
           <TopCards />
+          <div className="my-6 grid md:grid-cols-4 grid-cols-1 gap-4">
+            <div className="col-span-2">
+              <BarChart/>
+            </div>
+            <div className="col-span-2 bg-white w-full">
+              <RecentOrders/>
+            </div>
+          </div>
         </div>
       </main>
     </>

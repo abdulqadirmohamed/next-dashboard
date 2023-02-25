@@ -22,7 +22,6 @@ const TopCards = () => {
               <span className={`${data.percent < 15 ? 'text-red-600': 'text-green-600'}`}>+{data.percent}%</span>
               <span>
                 {data.percent > 15 ? <BsArrowUpShort size={20} /> : <BsArrowDownShort size={20}/>}
-                
               </span>
             </div>
           </div>
