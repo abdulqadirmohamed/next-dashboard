@@ -10,7 +10,7 @@ const TopCards = () => {
     { id: 4, title: "Total Customers", price: 33000, percent: 30 },
   ];
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-10 border-gray-100 border-[1px]">
+    <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-6 border-gray-100 border-[1px]">
       {cardData.map((data) => (
         <div className="bg-white px-6 py-3 rounded text-gray-700" key={data.id}>
           <div>

@@ -14,8 +14,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className="bg-gray-100 min-h-screen">
-        <div className="w-[95%] mx-auto">
           <Header />
+        <div className="w-[95%] mx-auto">
           <TopCards />
           <div className="my-6 grid md:grid-cols-4 grid-cols-1 gap-4">
             <div className="col-span-2">

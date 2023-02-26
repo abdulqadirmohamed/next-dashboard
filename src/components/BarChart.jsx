@@ -23,15 +23,16 @@ export const BarChart = () => {
   const [chartData, setChartData] = useState({
     datasets: [],
   });
+  const [dbData, setDbData] = useState([18127, 22201, 19490, 17938, 24182, 17842, 22475])
   const [chartOptions, setChartOptions] = useState({});
 
   useEffect(() => {
     setChartData({
-      labels: ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"],
+      labels: ["Mon", "Tue", "Wed", "Thurs", "Fri", "Sat", "Sun"],
       datasets: [
         {
           label: "Sales $",
-          data: [18127, 22201, 19490, 17938, 24182, 17842, 22475],
+          data: dbData,
           borderColor: "rgb(218,199,233)",
           backgroundColor: "rgb(53, 162, 235, 0.4",
         },
@@ -53,7 +54,7 @@ export const BarChart = () => {
   }, []);
   return (
     <div>
-      <div className="w-full md:col-span-2 relative lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white">
+      <div className="w-full md:col-span-2 relative lg:h-[65vh] h-[50vh] m-auto p-4 border rounded-lg bg-white">
         <Bar data={chartData} options={chartOptions} />
       </div>
     </div>
