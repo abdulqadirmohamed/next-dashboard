@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
-
+import Link from "next/link";
+import {motion} from 'framer-motion'
 function RecentOrders() {
   const customers = [
     {
@@ -26,7 +27,7 @@ function RecentOrders() {
   
   ];
   return (
-    <div className="p-6">
+    <motion.div className="p-6" animate={{y: [-50, 0, 0]}}>
       <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400 py-4">
         <thead className="text-[11px]  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
           <tr className="">
@@ -39,10 +40,11 @@ function RecentOrders() {
         <tbody className="text-left">
             {customers.map((customer)=>(
 
-          <tr key={customer.id} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700">
-            <td className="px-3 py-3  text-gray-900 whitespace-nowrap dark:text-white flex gap-2 items-center">
+          <tr key={customer.id} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-100 cursor-pointer">
+          
+            <td className="px-3 py-3  text-gray-900 whitespace-nowrap dark:text-white flex gap-2 items-center ">
                 <img src={customer.image} alt={customer.name} className="w-8 h-8 rounded-full" />
-                <span className="text-gray-500 ">{customer.name}</span>
+                <span className="text-gray-500 " href='/customers'>{customer.name}</span>
             </td>
             <td className="p-3">
                 <span className="bg-green-100  rounded-lg w-2 h-2"></span>
@@ -53,7 +55,7 @@ function RecentOrders() {
             ))}
         </tbody>
       </table>
-    </div>
+    </motion.div>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from 'framer-motion'
 import { BsArrowUpShort,BsArrowDownShort } from "react-icons/bs";
 import {GrLineChart} from 'react-icons/gr'
 import {RiLineChartFill} from 'react-icons/ri'
@@ -15,11 +16,11 @@ const TopCards = () => {
   ];
 
   return (
-    <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-6 border-gray-100 border-[1px]">
+    <motion.div animate={{y: [-50, 5, 0]}}  className="grid lg:grid-cols-4 md:grid-cols-2 gap-6 mt-6 border-gray-100 border-[1px]">
       {cardData.map((data) => (
         <div className="bg-white px-6 py-3 rounded text-gray-700" key={data.id}>
           <div className="flex justify-between items-center ">
-            <div className={`text-[${data.color}] text-[#6B21A8] p-3 rounded-lg`}>
+            <div className={`bg-[${data.color}] text-[#6B21A8] p-3 rounded-lg`}>
               {data.icon}
             </div>
             <h4>{data.title}</h4>
@@ -35,7 +36,7 @@ const TopCards = () => {
           </div>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

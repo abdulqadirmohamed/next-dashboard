@@ -1,4 +1,5 @@
 import React from "react";
+import {motion} from 'framer-motion'
 import Head from "next/head";
 import Header from "@/components/Header";
 
@@ -35,7 +36,7 @@ const customers = () => {
       </Head>
       <Header />
 
-      <div className="w-[95%] mx-auto">
+      <motion.div animate={{y:[-50,0,0]}} className="w-[95%] mx-auto">
         <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400 py-4">
           <thead className="text-[11px]  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
             <tr className="">
@@ -77,7 +78,7 @@ const customers = () => {
             ))}
           </tbody>
         </table>
-      </div>
+      </motion.div>
     </>
   );
 };
