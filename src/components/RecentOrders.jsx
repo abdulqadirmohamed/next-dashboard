@@ -22,15 +22,14 @@ function RecentOrders() {
       amount: 2455,
       image:
         "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
-    },
-  
+    }
   
   ];
   return (
     <div className="p-6">
-      <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 py-4">
-        <thead className="text-[11px] text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
-          <tr>
+      <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400 py-4">
+        <thead className="text-[11px]  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
+          <tr className="">
             <th scope="col" className="p-3">Customer</th>
             <th scope="col" className="p-3">Status</th>
             <th scope="col" className="p-3">Retained</th>

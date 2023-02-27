@@ -17,11 +17,11 @@ export default function Home() {
           <Header />
         <div className="w-[95%] mx-auto">
           <TopCards />
-          <div className="my-6 grid md:grid-cols-4 grid-cols-1 gap-4">
+          <div className="my-6 grid md:grid-cols-4 grid-cols-1 gap-6">
             <div className="col-span-2">
               <BarChart/>
             </div>
-            <div className="col-span-2 bg-white w-full">
+            <div className="col-span-2 bg-white w-full lg:h-[65vh] h-[50vh] overflow-scroll scrollbar-hide rounded-md">
               <RecentOrders/>
             </div>
           </div>
