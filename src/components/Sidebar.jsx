@@ -2,9 +2,10 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { RxSketchLogo, RxDashboard, RxPerson } from 'react-icons/rx';
+import { RxSketchLogo, RxDashboard } from 'react-icons/rx';
 import { HiOutlineShoppingBag } from 'react-icons/hi';
 import { FiSettings } from 'react-icons/fi';
+import { BsPinAngle } from 'react-icons/bs';
 
 const Sidebar = ({ children }) => {
   const router = useRouter();
@@ -13,6 +14,7 @@ const Sidebar = ({ children }) => {
   ];
   return (
     <div className='flex'>
+     
       <div className='fixed w-20 h-screen p-4 bg-white border-r-[1px] flex flex-col justify-between'>
         <div className='flex flex-col items-center'>
           <Link href='/'>
@@ -26,9 +28,9 @@ const Sidebar = ({ children }) => {
               <RxDashboard size={20} />
             </div>
           </Link>
-          <Link href='/customers'>
-            <div className={`p-3 my-4 rounded-lg inline-block bg-gray-100 ${(router.pathname == "/customers"? "bg-purple-800 text-white":"" )}`}>
-              <RxPerson size={20} />
+          <Link href='/posts'>
+            <div className={`p-3 my-4 rounded-lg inline-block bg-gray-100 ${(router.pathname == "/posts"? "bg-purple-800 text-white":"" )}`}>
+              <BsPinAngle size={20} />
             </div>
           </Link>
           <Link href='/orders'>

@@ -2,7 +2,7 @@ import React from "react";
 import {IoIosNotifications} from 'react-icons/io'
 const Header = () => {
   return (
-    <div className=" bg-white w-full py-4 ">
+    <div className=" bg-white w-full py-4 shadow-sm">
       <div className="w-[95%] mx-auto flex justify-between">
         <h1>Dashboard</h1>
         <div className="flex items-center gap-4">
