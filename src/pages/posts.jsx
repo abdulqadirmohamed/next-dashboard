@@ -39,7 +39,7 @@ const posts = () => {
 
       <motion.div animate={{ y: [-50, 0, 0] }} className="w-[95%] mx-auto">
         <div className="my-4">
-           <Link href="/newpost" className="button">Add New</Link>
+           <Link href="/newpost" className="bg-indigo-700 text-white px-4 py-2 rounded hover:bg-indigo-800 transition-all duration-150 ease-linear">Add New</Link>
         </div>
         <table className="w-full text-sm text-left  text-gray-500 dark:text-gray-400 py-4">
           <thead className="text-[11px]  text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 ">
