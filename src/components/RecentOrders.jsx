@@ -40,7 +40,7 @@ function RecentOrders() {
         <tbody className="text-left">
             {customers.map((customer)=>(
 
-          <tr key={customer.id} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700 hover:bg-gray-100 cursor-pointer">
+          <tr key={customer.id} className="bg-white border-b hover:bg-gray-100 cursor-pointer">
           
             <td className="px-3 py-3  text-gray-900 whitespace-nowrap dark:text-white flex gap-2 items-center ">
                 <img src={customer.image} alt={customer.name} className="w-8 h-8 rounded-full" />

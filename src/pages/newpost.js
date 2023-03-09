@@ -45,7 +45,7 @@ const newpost = () => {
               </label>
               <select
                 id="countries"
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
               >
                 <option selected>Public</option>
                 <option value="US">Draft</option>
@@ -59,14 +59,14 @@ const newpost = () => {
               <h3 className="mb-4 font-semibold text-gray-900 dark:text-white">
                 Category
               </h3>
-              <ul className="w-48 text-sm font-medium py-4 text-gray-900  dark:bg-gray-700  dark:text-white">
+              <ul className="w-48 text-sm font-medium py-4 text-gray-900    dark:text-white">
                 <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
                   <div className="flex items-center pl-3">
                     <input
                       id="vue-checkbox"
                       type="checkbox"
                       value=""
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 "
                     />
                     <label
                       for="vue-checkbox"
@@ -82,7 +82,7 @@ const newpost = () => {
                       id="react-checkbox"
                       type="checkbox"
                       value=""
-                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500"
+                      className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 outline-none rounded focus:ring-blue-500 dark:focus:ring-blue-600"
                     />
                     <label
                       for="react-checkbox"
